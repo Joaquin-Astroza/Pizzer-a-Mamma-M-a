@@ -1,0 +1,61 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  
+  .card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    padding: 20px;
+    text-align: center;
+  }
+    
+  
+  .botones-tarjetas {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .card-link {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  
+  .ver-mas {
+    background-color: white;
+  }
+  
+  .añadir {
+    background-color: black;
+    color: white;
+  }

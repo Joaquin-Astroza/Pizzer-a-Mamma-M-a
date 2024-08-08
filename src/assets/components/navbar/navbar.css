@@ -1,0 +1,80 @@
+.navbar {
+    background-color: #343a40;
+    padding: 1rem;
+
+  }
+  
+  .navbar-brand {
+    color: #fff !important;
+    font-size: 30px;
+        
+  }
+  .container-fluid{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100vh;
+    
+  }
+  
+  .icono {
+    margin-right: 5px;
+  }
+  .nav-item{
+    list-style: none;
+  }
+  .nav-link {
+    color: #fff !important;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid !important;
+    border-color: #fff !important;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .nav-link i {
+    margin-right: 5px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px;
+  }
+  .collapse{
+    display: flex;
+    justify-content: space-around;
+    width: 70vh;
+    margin: 0px;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107 !important;
+  }
+  
+  .navbar-text {
+    color: #fff !important;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .navbar-text.total i {
+    margin-right: 5px;
+  }
+  
+  .totalCarrito {
+    color: #3498db !important;
+    border-radius: 5px;
+    padding: 2px !important;
+    border-color: #3498db !important;
+    background-color: #343a40;
+  }

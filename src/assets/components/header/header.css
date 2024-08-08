@@ -1,0 +1,29 @@
+.subtitulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 100px;
+    background-image: url(https://www.shutterstock.com/image-photo/tasty-pepperoni-pizza-cooking-ingredients-260nw-1233657130.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 300px; /* Puedes ajustar la altura según sea necesario */
+    color: white;
+    margin: 0;
+  }
+  
+  .subtitulo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitulo p {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  
