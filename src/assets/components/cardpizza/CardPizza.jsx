@@ -1,11 +1,10 @@
+
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPizzaSlice, faShoppingCart, faEye } from "@fortawesome/free-solid-svg-icons";
 import "../cardpizza/cardpizza.css";
 
-export default function CardPizza(props) {
-  const pizza = props.pizza;
-
+export default function CardPizza({ pizza }) {
   return (
     <div className="container">
       <div className="row card">
@@ -27,9 +26,8 @@ export default function CardPizza(props) {
           <br />
           <div className="botones-tarjetas">
             <button className="card-link ver-mas">
-              {" "}
               <FontAwesomeIcon icon={faEye} className="icono" />
-              Ver más{" "}
+              Ver más
             </button>
             <button className="card-link añadir">
               <FontAwesomeIcon icon={faShoppingCart} className="icono" /> Añadir

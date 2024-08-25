@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "./assets/components/footer/Footer";
 import Home from "./assets/components/home/Home";
 import Navbar from "./assets/components/navbar/Navbar";
@@ -12,20 +12,23 @@ import {
   faEye,
 } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
-import { useState } from "react";
 import RegisterPage from "./assets/components/register/RegisterPage";
 import LoginPage from "./assets/components/register/LoginPage";
 import Cart from "./assets/components/cart/Cart";
+import Pizza from "./assets/components/pizza/Pizza";
 library.add(faUser, faShoppingCart, faLock, faUnlock, faPizzaSlice, faEye);
 
+
 function App() {
+  
   return (
     <div>
       <Navbar />
-      {/*<Home /> */}
+      {/*<Home/>*/}
       {/* <RegisterPage /> */}
       {/*<LoginPage/> */}
-      <Cart />
+      {/*<Cart />*/}
+       <Pizza/>
       <Footer />
     </div>
   );
