@@ -2,7 +2,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPizzaSlice, faShoppingCart, faEye } from "@fortawesome/free-solid-svg-icons";
-import "../cardpizza/cardpizza.css";
+import "./cardpizza.css";
 
 export default function CardPizza({ pizza }) {
   return (

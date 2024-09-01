@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../pizza/pizza.css"
+import "./pizza.css"
 export default function Pizza() {
     const [pizza, setPizza] = useState(null);
 

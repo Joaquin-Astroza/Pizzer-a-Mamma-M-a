@@ -1,5 +1,5 @@
 import React from 'react'
-import "../footer/footer.css";
+import "./footer.css";
 export default function Footer() {
   return (
     <div className='pie_pagina'>

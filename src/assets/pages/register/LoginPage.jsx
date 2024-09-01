@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../register/loginpage.css";
+import "./loginpage.css";
 
 export default function LoginPage() {
   const [contraseña, setContraseña] = useState("");
