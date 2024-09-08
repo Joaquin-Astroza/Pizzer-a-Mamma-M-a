@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,9 +9,10 @@ import {
   faPizzaSlice,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 export default function Navbar() {
-  const total = 25000;
+  const {precioTotal,cantidadtotal} = useContext(CartContext);
   const token = false;
 
   return (
@@ -75,7 +76,7 @@ export default function Navbar() {
                   <button className=" nav-link totalCarrito">
                     <Link to="/cart">
                       <FontAwesomeIcon icon={faShoppingCart} /> Total: $
-                      {total.toLocaleString()}
+                      {precioTotal.toLocaleString()} ({cantidadtotal})
                     </Link>
                   </button>
                 </li>

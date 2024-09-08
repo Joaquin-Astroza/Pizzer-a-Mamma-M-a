@@ -1,10 +1,12 @@
 
-import React from "react";
+import React, {useContext} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPizzaSlice, faShoppingCart, faEye } from "@fortawesome/free-solid-svg-icons";
 import "./cardpizza.css";
+import { CartContext } from "../../context/CartContext";
 
 export default function CardPizza({ pizza }) {
+  const {addCart}= useContext (CartContext);
   return (
     <div className="container">
       <div className="row card">
@@ -29,7 +31,7 @@ export default function CardPizza({ pizza }) {
               <FontAwesomeIcon icon={faEye} className="icono" />
               Ver más
             </button>
-            <button className="card-link añadir">
+            <button className="card-link añadir" onClick={()=> addCart(pizza)}>
               <FontAwesomeIcon icon={faShoppingCart} className="icono" /> Añadir
             </button>
           </div>
