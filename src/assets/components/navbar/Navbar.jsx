@@ -10,10 +10,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
+import { UserContext } from "../../context/UserContext";
 
 export default function Navbar() {
   const {precioTotal,cantidadtotal} = useContext(CartContext);
-  const token = false;
+  const {token, logout } = useContext(UserContext);
 
   return (
     <div>
@@ -43,7 +44,7 @@ export default function Navbar() {
                     </button>
                   </li>
                   <li className="nav-item">
-                    <button className="nav-link nav-btn">
+                    <button className="nav-link nav-btn" onClick={logout}>
                       <FontAwesomeIcon icon={faLock} className="icono" />
                       Logout
                     </button>

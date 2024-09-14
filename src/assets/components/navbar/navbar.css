@@ -3,7 +3,10 @@
     padding: 1rem;
 
   }
-  
+  .active {
+    color: darkgreen;
+    font-weight: bold;
+    }
   .navbar-brand {
     color: #fff !important;
     font-size: 30px;

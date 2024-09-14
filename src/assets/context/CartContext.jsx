@@ -25,8 +25,10 @@ export const CartContextProvider = ({children}) => {
             )
         }
         else {
+            setCartItems(
             cartItems.map ((item)=>
                 item.id === pizza.id ? {...item, count: item.count - 1} : item)
+        )
         }
     }
 

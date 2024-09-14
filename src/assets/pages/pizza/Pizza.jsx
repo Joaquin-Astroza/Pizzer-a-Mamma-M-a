@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "./pizza.css"
+import { useParams } from "react-router-dom";
 export default function Pizza() {
+  const {id} = useParams();
     const [pizza, setPizza] = useState(null);
 
     const tomarPizza = async () => {
 
-        const response = await fetch("http://localhost:5000/api/pizzas/p001");
+        const response = await fetch(`http://localhost:5000/api/pizzas/${id}`);
         const data = await response.json();
         setPizza(data);
-        console.log(setPizza)
       } 
   
     useEffect(() => {
       tomarPizza();
-    }, []);
+    }, [id]);
     if (!pizza) {
         return <div>Cargando...</div>;
     }
