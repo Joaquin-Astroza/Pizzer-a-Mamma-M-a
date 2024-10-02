@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./loginpage.css";
+import { UserContext } from "../../context/UserContext";
 
 export default function LoginPage() {
   const [contraseña, setContraseña] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState("");
+  const {login} = useContext(UserContext)
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!email || !contraseña) {
       setMessage("Todos los campos son obligatorios.");
@@ -15,6 +17,12 @@ export default function LoginPage() {
     if (contraseña.length < 6) {
       setMessage("La contraseña debe tener al menos 6 caracteres.");
       return;
+    }
+    try {
+      await login (email, contraseña);
+      setMessage("Inicio exitoso.")
+    } catch (error) {
+      setMessage("Error de inicio de sesión.")
     }
     console.log("Contraseña: ", contraseña);
     console.log("Email: ", email);

@@ -18,7 +18,7 @@ import Cart from "./assets/pages/cart/Cart";
 import Pizza from "./assets/pages/pizza/Pizza";
 import NotFound from "./assets/pages/notfound/NotFound";
 import Profile from "./assets/pages/profile/Profile";
-import { Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { CartContextProvider } from "./assets/context/CartContext";
 import { UserContext } from "./assets/context/UserContext";
 library.add(faUser, faShoppingCart, faLock, faUnlock, faPizzaSlice, faEye);

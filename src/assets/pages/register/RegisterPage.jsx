@@ -1,13 +1,16 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import "./loginpage.css"
+import { UserContext } from "../../context/UserContext";
 
 export default function RegisterPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const {register}= useContext(UserContext)
+
+
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     if (!email || !password || !confirmPassword) {
@@ -24,9 +27,13 @@ export default function RegisterPage() {
       setMessage("Las contraseñas no coinciden.");
       return;
     }
+    try {
+      await register(email, password);
+      setMessage("Registro exitoso!");
+    } catch (error) {
+      setMessage("Error de registro");
+    }
 
-    setMessage("Registro exitoso!");
-    console.log({ email, password });
   };
   return (
     <div className="main">
